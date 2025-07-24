@@ -12,7 +12,7 @@ public class s5 {
             if(digit%2!=0)
             {
                 String h=num.substring(0,j+1);
-                  System.out.println(h);
+               System.out.println(h);
             }
            
             j--;
