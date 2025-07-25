@@ -14,7 +14,7 @@ public class bs5 {
     }
      else if(nums[i]<=nums[mid])
      {
-        if(nums[mid]<)
+        
      }
  }
     }
