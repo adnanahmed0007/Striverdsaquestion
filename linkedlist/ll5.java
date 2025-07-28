@@ -1,6 +1,7 @@
 package linkedlist;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ll5 {
     Node head;
@@ -34,6 +35,7 @@ public class ll5 {
     public void palindroime()
     {
         ArrayList<Integer>list1=new ArrayList<>();
+        
         Node temp=head;
         while(temp!=null)
         {
@@ -41,8 +43,18 @@ public class ll5 {
             temp=temp.next;
 
         }
-        System.out.println(list1);
+        int i=0;
+        int j=list1.size()-1;
+        while(i<=j)
+        {
+            if(!list1.get(i).equals(list1.get(j)))
+            {
+                 
+
+            }
+        }
     }
+     
     public void println()
     {
         Node temp=head;
