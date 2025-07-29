@@ -74,7 +74,8 @@ class mainjkaqq
     public static void main(String[] args) {
         ll14 freww=new ll14();
         freww.add(1);
-        
+        freww.add(2);
+        freww.add(3);
          
         freww.print();
         System.out.println();
