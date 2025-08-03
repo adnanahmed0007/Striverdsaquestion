@@ -1,38 +1,23 @@
 package bitmanuplation;
 
-import java.util.ArrayList;
+
 
 public class bm17 {
-     public void miaa(int n)
+     public boolean miaa(int n)
     {
-        int count=0;
-        int min=Integer.MIN_VALUE;
-        ArrayList<Integer>list1=new ArrayList<>();
-       while(n>=1)
-       {
-        if((n&1)==1)
+        int a=n>>=1;
+        while(a>=1)
         {
-            list1.add(1);
-            count++;
-        }
-        else{
-            list1.add(0);
-            System.out.println(count);
-            if(count>min)
+            if((n&1)==1&&(a&1)==1)
             {
-                min=count;
+                   return false;
             }
-            count=0;
+            n>>=1;
+            a>>=1;
+            
         }
-      n>>=1;
-
-       }
-       if(count>min)
-       {
-        min=count;
-       }
-       
-       System.out.println("dd"+list1+" "+min);
+        return true;
+        
     }
     
 }
