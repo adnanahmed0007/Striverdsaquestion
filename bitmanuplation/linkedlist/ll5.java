@@ -1,4 +1,4 @@
-package linkedlist;
+package bitmanuplation.linkedlist;
 
 import java.util.ArrayList;
 import java.util.Collections;

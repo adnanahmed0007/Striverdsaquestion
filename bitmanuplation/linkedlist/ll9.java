@@ -1,4 +1,4 @@
-package linkedlist;
+package bitmanuplation.linkedlist;
 
 public class ll9 {
     Node head;

@@ -1,19 +1,18 @@
-package linkedlist;
+package bitmanuplation.linkedlist;
 
-public class ll2 {
-    int length;
+public class ll13 {
     Node head;
     Node tail;
+    int length;
     class Node{
         int value;
         Node next;
         Node(int value)
         {
             this.value=value;
-            
         }
     }
-    public void addNode(int value)
+    public void add(int value)
     {
         Node newNode=new Node(value);
         if(head==null)
@@ -37,44 +36,35 @@ public class ll2 {
             temp=temp.next;
         }
     }
-    public void deLETE(int value)
+    public void revsre()
     {
-        if(length==1)
-        {
-            head=null;
-            tail=null;
-        }
+        Node fron=null;
+        Node prev=null;
         Node temp=head;
-        Node prev=temp;
         while(temp!=null)
         {
-            if(temp.value==value)
-            {
-                prev.next=temp.next;
-                prev=temp;
-                temp=temp.next;
-                 
-            }
-            else{
+            fron=temp.next;
+            temp.next=prev;
             prev=temp;
-            temp=temp.next;
-            }
-             
+            temp=fron;
         }
+        tail=head;
+        head=prev;
+
+
 
     }
 }
-class main0801ss
+class main0912
 {
     public static void main(String[] args) {
-        ll2 hyr=new ll2();
-        hyr.addNode(1);
-        hyr.addNode(2);
-        hyr.addNode(3);
-        hyr.addNode(8);
-        hyr.addNode(6);
-        hyr.deLETE(6);
-        hyr.print();
-
+        ll13 drw=new ll13();
+        drw.add(1);
+        drw.add(2);
+        drw.add(3);
+        drw.print();
+        System.out.println();
+        drw.revsre();
+        drw.print();
     }
 }

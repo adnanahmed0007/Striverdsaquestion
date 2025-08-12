@@ -1,6 +1,6 @@
-package linkedlist;
+package bitmanuplation.linkedlist;
 
-public class ll11 {
+public class ll12 {
     Node head;
     Node tail;
     int length;
@@ -36,32 +36,37 @@ public class ll11 {
             temp=temp.next;
         }
     }
-    public void findmmidd()
+    public void reverse()
     {
-        Node slow=head;
-        Node fast=head;
-        while(fast!=null&&fast.next!=null)
+        Node temp=head;
+        Node prev=null;
+        Node fornt=null;
+        while(temp!=null)
         {
-            slow=slow.next;
-            fast=fast.next.next;
+            fornt=temp.next;
+            temp.next=prev;
+            prev=temp;
+            temp=fornt; 
         }
-        slow.value=slow.next.value;
-        slow.next=slow.next.next;
-        System.out.println(slow.value);
+        tail=head;
+        head=prev;
+
+        
+
     }
 }
-class main091ww
+class hiamain00
 {
     public static void main(String[] args) {
-        ll11 gtrw=new ll11();
-        gtrw.add(1);
-        gtrw.add(2);
-        gtrw.add(3);
-        gtrw.add(4);
-        gtrw.print();
-        System.out.println();
-        gtrw.findmmidd();
-        System.out.println();
-        gtrw.print();
+        ll12 freww=new ll12();
+        freww.add(1);
+        freww.add(2);
+        freww.add(3);
+        freww.print();
+        
+        freww.reverse();
+        
+        freww.print();
+
     }
 }
