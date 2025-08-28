@@ -1,16 +1,16 @@
-package bitmanuplation.linkedlist;
+package linkedlist;
 
-public class ll11 {
+public class ll13 {
     Node head;
     Node tail;
     int length;
     class Node{
         int value;
         Node next;
-          Node( int value)
-          {
+        Node(int value)
+        {
             this.value=value;
-          }
+        }
     }
     public void add(int value)
     {
@@ -36,32 +36,35 @@ public class ll11 {
             temp=temp.next;
         }
     }
-    public void findmmidd()
+    public void revsre()
     {
-        Node slow=head;
-        Node fast=head;
-        while(fast!=null&&fast.next!=null)
+        Node fron=null;
+        Node prev=null;
+        Node temp=head;
+        while(temp!=null)
         {
-            slow=slow.next;
-            fast=fast.next.next;
+            fron=temp.next;
+            temp.next=prev;
+            prev=temp;
+            temp=fron;
         }
-        slow.value=slow.next.value;
-        slow.next=slow.next.next;
-        System.out.println(slow.value);
+        tail=head;
+        head=prev;
+
+
+
     }
 }
-class main091ww
+class main0912
 {
     public static void main(String[] args) {
-        ll11 gtrw=new ll11();
-        gtrw.add(1);
-        gtrw.add(2);
-        gtrw.add(3);
-        gtrw.add(4);
-        gtrw.print();
+        ll13 drw=new ll13();
+        drw.add(1);
+        drw.add(2);
+        drw.add(3);
+        drw.print();
         System.out.println();
-        gtrw.findmmidd();
-        System.out.println();
-        gtrw.print();
+        drw.revsre();
+        drw.print();
     }
 }
