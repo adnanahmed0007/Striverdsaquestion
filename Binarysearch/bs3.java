@@ -35,7 +35,7 @@ class main9781
 {
     public static void main(String[] args) {
         bs3 gtr=new bs3();
-         int nums[] = {1,3,5,6}; 
+         int nums[] = {1,2,3,5,6}; 
          int target = 2;
          gtr.insertion(nums,target);
         

@@ -40,7 +40,7 @@ class main12a
     public static void main(String[] args) {
         bs1 gt=new bs1();
         int arr[]={1,0,3,5,9,12};
-        int h=-89;
+        int h=12;
         gt.finfnum(arr,h);
     }
 }
